@@ -1,0 +1,16 @@
+@import "fonts/styles.css";
+@import "cursor/styles.css";
+@import "nav/styles.css";
+@import "header/styles.css";
+@import "main/styles.css";
+@import "aside/styles.css";
+@import "section/styles.css";
+@import "footer/styles.css";
+
+:root {
+  --vh: 1vh;
+}
+
+.100vh_section{
+    height: calc(var(--vh) * 100);
+}

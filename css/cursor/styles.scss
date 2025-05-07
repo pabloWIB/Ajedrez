@@ -1,0 +1,62 @@
+:root {
+    --cursor-size: 18px; 
+  }
+  
+  button {
+    outline: none;
+    border: none;
+    background: inherit;
+    color: currentcolor;
+    font-size: inherit;
+    font-family: inherit;
+  }
+  
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  [data-hover] {
+    position: relative;
+    [data-hover-bounds] {
+      position: absolute;
+      left: 0;
+      top: 0;
+      inset: 0;
+      pointer-events: none;
+    }
+    &:hover {
+      [data-hover-bounds] {
+        transform: scale(3.5);
+      }
+    }
+  }
+  
+  .cursor {
+    width: var(--cursor-size);
+    height: var(--cursor-size);
+    border-radius: 50%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transform: translate(-50%, -50%) scale(0.7); 
+    background: rgb(255, 255, 255);
+    mix-blend-mode: difference;
+    pointer-events: none;
+    z-index: 200;
+    transition: transform 0.1s ease;
+  }
+  
+  .cta {
+    width: 100px;
+    position: fixed;
+    top: -999px;
+    left: -999px;
+    pointer-events: none;
+  }
+  
+  @media(max-width: 768px){
+    .cursor{
+      display: none
+    }
+  }

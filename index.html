@@ -74,7 +74,23 @@
 </head>
 <body>
 
-
+ <div id="chess-container"></div>
+  
+  <!-- Incluir código del juego -->
+  <script src="ajedrez.js"></script>
+  
+  <!-- Inicializar el juego -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Inicializar el juego de ajedrez
+      const chess = initChessGame('chess-container');
+      
+      // Se puede acceder al gestor del juego para operaciones programáticas
+      // Por ejemplo:
+      // chess.gameManager.startNewGame();
+      // chess.gameManager.executeMove([6, 4], [4, 4]);
+    });
+  </script>
 	<div class="cursor"></div>
 	
 	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
